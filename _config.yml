@@ -20,8 +20,11 @@ name: ""
 
 search: false
 
-author:
-footer: 
+footer:
+
+main:
+  - title: "O idei"
+    url: /about/
 
 comments:
   provider: "facebook"
