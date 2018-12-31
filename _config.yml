@@ -7,6 +7,8 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+
+include: ["_pages"]
   
 minimal_mistakes_skin: "plum"
 
