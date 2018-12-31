@@ -1,0 +1,52 @@
+remote_theme: "mmistakes/minimal-mistakes@4.14.1"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  
+minimal_mistakes_skin: "plum"
+
+locale: "pl"
+
+title: "-10te urodziny"
+
+name: ""
+
+search: false
+
+author:
+footer: 
+
+comments:
+  provider: "facebook"
+  facebook:
+    appid:
+    num_posts: 5
+    colorscheme: "dark"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      toc: true
+      comments: true
+      read_time: false
+      author_profile: true
+      related: false
+
+author:
+  name             : "Bart&Seba&Pioter"
+  avatar           : "/assets/-10_post.jpg"
+  bio              : "-10te urodziny blog"
+  location         : ""
+  email            : minus10urodziny@gmail.com
+  links:
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://facebook.com/"
