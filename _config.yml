@@ -16,15 +16,13 @@ locale: "pl"
 
 title: "-10te urodziny"
 
+paginate: 5
+
 name: ""
 
 search: false
 
 footer:
-
-main:
-  - title: "O idei"
-    url: /about/
 
 comments:
   provider: "facebook"
