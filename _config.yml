@@ -66,7 +66,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 author:
   name             : "Bart&Seba&Pioter"
   avatar           : "/assets/-10_post.jpg"
