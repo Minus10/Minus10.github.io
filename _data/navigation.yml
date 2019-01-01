@@ -1,3 +1,7 @@
 main:
   - title: "O idei"
     url: /about/
+  - title: "Prezenty"
+    url: /gifts/
+  - title: "Autorzy"
+    url: /authors/
