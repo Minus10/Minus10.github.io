@@ -1,0 +1,16 @@
+{% capture tocWorkspace %}
+    {% capture my_toc %}{% endcapture %}
+    {% assign id = 0 %}    
+    {% for node in site.posts %}
+        {% assign id = id + 1 %}
+        {% assign html_id = 'id="' | append: id | append: '"' %}
+        {% assign header = node.title %}
+
+        {% capture my_toc %}{{ my_toc }}
+ - [{{ header }}]({{node.url}}#{{ html_id }}){% endcapture %}
+    {% endfor %}
+
+    {% capture my_toc %}{:.toc__menu}
+{{ my_toc | lstrip }}{% endcapture %}
+
+{% endcapture %}{% assign tocWorkspace = '' %}{{ my_toc | markdownify | strip }}

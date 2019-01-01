@@ -41,12 +41,14 @@ defaults:
       read_time: false
       author_profile: true
       related: false
+      toc: true
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
+      toc: true
 
 markdown: kramdown
 highlighter: rouge
