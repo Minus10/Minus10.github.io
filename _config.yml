@@ -37,7 +37,6 @@ defaults:
       type: posts
     values:
       layout: single
-      toc: true
       comments: true
       read_time: false
       author_profile: true
@@ -48,7 +47,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      toc: true
 
 markdown: kramdown
 highlighter: rouge
