@@ -1,6 +1,8 @@
 main:
   - title: "O idei"
     url: /about/
+  - title: "Konkurs"
+    url: /contest/
   - title: "Kodowanie"
     url: /u2/
   - title: "Prezenty"
