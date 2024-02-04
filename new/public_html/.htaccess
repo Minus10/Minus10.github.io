@@ -1,0 +1,6 @@
+AddHandler application/x-httpd-php52 php
+php_value register_long_arrays on
+php_value memory_limit 256M
+RewriteEngine On
+
+RewriteRule    ^([^/]+)/$    index.php?requested_content=$1    [NC,L]    # Handle product requests

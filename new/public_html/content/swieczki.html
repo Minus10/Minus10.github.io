@@ -1,0 +1,101 @@
+<h2>Ujemne jubileusze na świeczkach</h2>
+
+<p>
+    Jak za pomocą świeczek na torcie reprezentować ujemny jubileusz?
+    Okazuje się, że dla programistów nie jest to nic trudnego bo wystarczy zasięgnąć inspiracji od komputerów.
+</p>
+
+<p>
+    Obecnie najpowszechniejszym sposobem kodowania binarnych liczb ujemnych jest kod uzupełnień do 2.
+    W takim systemie liczbę -10 zapisuje się następująco, zakładając że mamy do dyspozycji 5 bitów: 10110.
+</p>
+
+<p>
+    Dziesiętnie, zapis ten oznacza takie wartości:
+</p>
+
+<table>
+    <tbody>
+      <tr>
+        <td>Cyfra binarna</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Wartość</td>
+        <td><strong>-</strong>(2<sup>4</sup>)</td>
+        <td>2<sup>3</sup></td>
+        <td>2<sup>2</sup></td>
+        <td>2<sup>1</sup></td>
+        <td>2<sup>0</sup></td>
+      </tr>
+    </tbody>
+</table>
+
+<p>
+    Wartości (wagi) to kolejne potęgi dwójki, poczynając od zera, przy czym największa z nich dodatkowo ma znak zmieniony na ujemny.
+</p>
+
+<p>
+    Zatem dla przykładowej liczby konwersja z powrotem na system dziesiętny wygląda następująco:
+</p>
+
+<p>
+    <code>
+    1 * -(2<sup>4</sup>) + 0 * 2<sup>3</sup> + 1 * 2<sup>2</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>0</sup>
+    </code> 
+    (znikają pozycje mnożone przez 0)
+</p>
+<p>
+    <code>
+    1 * -(2<sup>4</sup>) + 1 * 2<sup>2</sup> + 1 * 2<sup>1</sup>
+    </code> 
+    (obliczamy potęgi dwójki)
+</p>
+<p>
+    <code>
+    1 * -16 + 1 * 4 + 1 * 2
+    </code> 
+    (mnożymy)
+</p>
+<p>
+    <code>
+    -16 + 4 + 2
+    </code> 
+    (dodajemy)
+</p>
+<p>
+    I otrzymujemy wynik: <strong>-10</strong>.
+</p>
+    
+
+<p>
+    Ponieważ współczesny świat dynamicznie wchodzi w erę 64-bitową postanowiliśmy dla śmiechu konsekwentnie wszystkie wartości zapisywać na 64 bitach, mimo że niewiele to wnosi.
+    Trzeba dostawić same jedynki z lewej strony aż do uzyskania 64 cyfr.
+</p>
+
+<p>
+    Zatem -10 w systemie U2 na 64 bitach wygląda tak:
+    <pre>
+        11111111 11111111
+        11111111 11111111
+        11111111 11111111
+        11111111 11110110</pre>
+</p>
+<p>
+    (grupując cyfry po 8, dla wygody). W takich też rzędach, po 8 cyfr umieszczamy świeczki na torcie.
+</p>
+
+<p>
+    Przykładowo, liczbę <code>-8</code> zapiszemy w U2: <code>1000</code> (czyli <code>-(2<sup>3</sup>) = -8</code>), używając wszystkich 64 bitów:
+    <pre>
+        11111111 11111111
+        11111111 11111111
+        11111111 11111111
+        11111111 11111000</pre>
+</p>
+<p>Na torcie wygląda to tak:</p>
+<img src="/img/swieczki.jpg">
